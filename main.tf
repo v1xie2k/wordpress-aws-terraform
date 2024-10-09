@@ -51,7 +51,7 @@ resource "aws_db_instance" "wordpress_db" {
 
 resource "aws_db_subnet_group" "wordpress_db_subnet_group" {
   name       = "wordpress-db-subnet-group"
-  subnet_ids = [aws_subnet.mysubnet_1a.id, aws_subnet.mysubnet_1b.id]
+  subnet_ids = [aws_subnet.myprivatesubnet_1a.id, aws_subnet.myprivatesubnet_1b.id]
 
   tags = {
     Name = "wordpress-db-subnet-group"
